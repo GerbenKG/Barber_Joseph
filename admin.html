@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin · Barber Joseph</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="admin.css">
+  <script defer src="admin.js"></script>
+</head>
+<body class="admin-page">
+  <header class="admin-header">
+    <a class="brand" href="index.html">BARBER <span>JOSEPH</span></a>
+    <div class="admin-header-actions">
+      <span class="admin-user">Panel de administración</span>
+      <a class="button button-secondary" href="index.html">Ver web pública ↗</a>
+    </div>
+  </header>
+
+  <main class="admin-shell">
+    <section class="admin-intro">
+      <div>
+        <p class="eyebrow">Gestión del negocio</p>
+        <h1>Tu agenda, bajo control.</h1>
+        <p>Gestiona los días disponibles y revisa las próximas solicitudes de cita.</p>
+      </div>
+      <div class="admin-date" id="today-label"></div>
+    </section>
+
+    <section class="admin-stats" aria-label="Resumen">
+      <article class="admin-stat"><span>Citas pendientes</span><strong id="pending-count">0</strong></article>
+      <article class="admin-stat"><span>Próximas citas</span><strong id="upcoming-count">0</strong></article>
+      <article class="admin-stat"><span>Días abiertos esta semana</span><strong id="open-days-count">0</strong></article>
+    </section>
+
+    <div class="admin-grid">
+      <section class="admin-card">
+        <div class="admin-card-heading">
+          <div><p class="eyebrow">Disponibilidad</p><h2>Configurar horario</h2></div>
+          <span class="status-pill">Demo</span>
+        </div>
+        <p class="muted">Activa o desactiva días y define las horas que podrán reservar los clientes.</p>
+        <div id="availability-list" class="availability-list"></div>
+        <button class="button button-primary" id="save-availability">Guardar disponibilidad</button>
+        <p class="form-status" id="availability-status" role="status"></p>
+      </section>
+
+      <section class="admin-card">
+        <div class="admin-card-heading">
+          <div><p class="eyebrow">Agenda</p><h2>Próximas citas</h2></div>
+          <select id="appointment-filter" aria-label="Filtrar citas">
+            <option value="all">Todas</option>
+            <option value="pending">Pendientes</option>
+            <option value="confirmed">Confirmadas</option>
+            <option value="cancelled">Canceladas</option>
+          </select>
+        </div>
+        <div id="appointments-list" class="appointments-list"></div>
+      </section>
+    </div>
+
+    <section class="admin-note">
+      <strong>Importante:</strong> esta es una interfaz de administración de demostración. Los cambios se guardan únicamente en este navegador mediante <code>localStorage</code>. Para gestionar citas reales desde cualquier dispositivo, habrá que conectar el panel a una API segura en Plesk/MySQL y añadir autenticación de administrador.
+    </section>
+  </main>
+</body>
+</html>

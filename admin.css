@@ -1,0 +1,57 @@
+.admin-page { background: #f7f3ec; color: #263b32; min-height: 100vh; }
+.admin-header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.2rem 5%; background: #fffdf9; border-bottom: 1px solid #e6dfd4; }
+.admin-header .brand { color: #263b32; text-decoration: none; font-weight: 800; letter-spacing: .08em; }
+.admin-header .brand span { color: #bd8654; }
+.admin-header-actions { display: flex; align-items: center; gap: 1rem; }
+.admin-user, .muted { color: #758078; }
+.admin-shell { width: min(1180px, 90%); margin: 0 auto; padding: 3.5rem 0; }
+.admin-intro { display: flex; justify-content: space-between; align-items: end; gap: 2rem; margin-bottom: 2rem; }
+.admin-intro h1 { margin: .25rem 0 .75rem; font-size: clamp(2rem, 4vw, 3.4rem); }
+.admin-intro p { max-width: 600px; }
+.admin-date { background: #e5eee6; border-radius: 999px; padding: .75rem 1rem; font-size: .9rem; white-space: nowrap; }
+.admin-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 1.5rem; }
+.admin-stat, .admin-card, .admin-note { background: #fffdf9; border: 1px solid #e6dfd4; border-radius: 22px; box-shadow: 0 12px 35px rgba(38, 59, 50, .05); }
+.admin-stat { padding: 1.25rem 1.5rem; }
+.admin-stat span { display: block; color: #758078; font-size: .9rem; }
+.admin-stat strong { display: block; margin-top: .35rem; font-size: 2rem; }
+.admin-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 1.5rem; }
+.admin-card { padding: 1.5rem; }
+.admin-card-heading { display: flex; justify-content: space-between; align-items: start; gap: 1rem; margin-bottom: 1rem; }
+.admin-card h2 { margin: .25rem 0 0; }
+.admin-card select { border: 1px solid #d7d1c7; border-radius: 999px; padding: .6rem .8rem; background: #fff; color: #263b32; }
+.status-pill { display: inline-flex; align-items: center; border-radius: 999px; padding: .35rem .65rem; background: #e5eee6; color: #38634c; font-size: .75rem; font-weight: 700; white-space: nowrap; }
+.status-pending { background: #fff0d7; color: #9a651f; }
+.status-confirmed { background: #e1f0e5; color: #2e6a46; }
+.status-cancelled { background: #f8e2df; color: #9c4a42; }
+.availability-list { margin: 1.25rem 0; }
+.availability-row { display: grid; grid-template-columns: 110px 1fr; gap: .75rem; padding: .9rem 0; border-bottom: 1px solid #eee8df; }
+.day-toggle { display: flex; align-items: center; gap: .5rem; font-weight: 700; }
+.day-toggle input { accent-color: #547b61; }
+.hours-input input { width: 100%; box-sizing: border-box; border: 1px solid #d7d1c7; border-radius: 10px; padding: .7rem; background: #fff; color: #263b32; }
+.hours-input input:disabled { background: #f0ece5; opacity: .65; }
+.hours-input small { display: block; color: #9a9c95; margin-top: .25rem; }
+.appointments-list { display: grid; gap: .75rem; }
+.appointment-row { display: grid; grid-template-columns: 90px 1fr auto; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid #eee8df; }
+.appointment-date strong, .appointment-date span, .appointment-main strong, .appointment-main span, .appointment-main small { display: block; }
+.appointment-date span { color: #bd8654; font-weight: 800; margin-top: .25rem; }
+.appointment-main span, .appointment-main small { color: #758078; font-size: .85rem; margin-top: .2rem; }
+.appointment-actions { display: flex; flex-direction: column; align-items: end; gap: .45rem; }
+.text-button { border: 0; background: transparent; color: #38634c; cursor: pointer; font-weight: 700; padding: 0; }
+.text-button.danger { color: #b35c50; }
+.admin-note { margin-top: 1.5rem; padding: 1rem 1.25rem; color: #6d756e; font-size: .9rem; }
+.admin-note code { background: #f0ece5; border-radius: 5px; padding: .1rem .3rem; }
+
+@media (max-width: 850px) {
+  .admin-grid { grid-template-columns: 1fr; }
+  .admin-intro { align-items: start; flex-direction: column; }
+}
+@media (max-width: 600px) {
+  .admin-header { align-items: start; flex-direction: column; }
+  .admin-header-actions { width: 100%; justify-content: space-between; flex-wrap: wrap; }
+  .admin-shell { width: min(92%, 520px); padding: 2rem 0; }
+  .admin-stats { grid-template-columns: 1fr; }
+  .admin-card { padding: 1rem; border-radius: 16px; }
+  .availability-row { grid-template-columns: 1fr; gap: .45rem; }
+  .appointment-row { grid-template-columns: 1fr; gap: .5rem; }
+  .appointment-actions { align-items: start; flex-direction: row; flex-wrap: wrap; }
+}
